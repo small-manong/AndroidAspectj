@@ -1,0 +1,11 @@
+常用事件：
+google地图不是很准确。
+onClickListener:点击事件：button[] 数组来实现多个button;
+OnFocusChangedListener：imageButtons[]实现；焦点转移事件
+OnKeyDown:按下键盘  view 的onkeydown 和activtity的onkeydown
+onkeylistener:imageButton[0].performClick();模拟单击；
+imagebutton[0]。requestfoucus使他获得焦点；
+onlongclicklistener 长时间按住事件；
+ontoucheventer：
+ontouchlistener:
+

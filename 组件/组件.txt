@@ -1,0 +1,32 @@
+Handler异步处理：
+创建Handler对象
+创建线程对象
+调用Handler的 post方法，将要执行的线程对象添加到队列当中
+将要执行的操作写在线程的run方法中
+//在run方法内部，执行postDelayed或者post方法
+
+线程放入的队列
+消息对象的队列
+
+通过验证，可以看到如果只是通过Handler对象的post()方法，只是把一个子线程对象放到主线程队列中，并不是开启了一个子线程。通过HandlerThread对象方式才是开启了一个新的线程去执行程序。
+HandlerThread handlerThread = new HandlerThread("handler_thread");
+//通过handlerThread.getLooper()方法才能获得Looper对象  
+MyHandler myHandler = new MyHandle(handlerThread.getLooper());
+
+默认情况下，Handler接受的是当前线程下的消息循环实例（使用Handler(Looper looper)、Handler(Looper looper, Handler.Callback callback)可以指定线程），同时一个消息队列可以被当前线程中的多个对象进行分发、处理（在UI线程中，系统已经有一个Activity来处理了，你可以再起若干个Handler来处理）。在实例化Handler的时候，Looper可以是任意线程的，只要有Handler的指针，任何线程也都可以sendMessage。Handler对于Message的处理不是并发的。一个Looper 只有处理完一条Message才会读取下一条，所以消息的处理是阻塞形式的（handleMessage()方法里不应该有耗时操作，可以将耗时操作放在其他线程执行，操作完后发送Message（通过sendMessges方法）,然后由handleMessage()更新UI）。
+更多请看：http://www.cnblogs.com/keyindex/articles/1822463.html
+1.进度条的实现
+进度条两种方式：圆形的和水平进度条  ：只是样式不同；
+圆形进度条的样式的大中小；
+2. 双进度条的实现
+3.seekbar 得实现
+
+4.列表对话框
+5.普通对话框
+6.上下文菜单
+7.选项菜单  是点击菜单按钮而上下文菜单是
+选项两种实现方式：配置文件实现 和 实现接口的程序实现方式（多做几个超过6个按钮）
+作业：	进度条的一块跑的实现，线程实现。
+ 	取出登陆对话框的内容
+
+初级的android程序员必须掌握视图组件的运用，高级的才去掌握线程啊什么的。

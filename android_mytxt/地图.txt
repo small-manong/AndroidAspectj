@@ -1,0 +1,48 @@
+androiddebugkey, 2012-3-25, PrivateKeyEntry,
+认证指纹 (MD5)： 14:94:4A:0A:E7:31:7C:86:D2:3E:E4:E9:2F:3D:EE:98。
+
+googleapikey  :   0kVZ6GAnUO24FOAVnRIHx5jJLHDDYfDF0poXOAw。
+
+<com.google.android.maps.MapView
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+                 android:apiKey="0kVZ6GAnUO24FOAVnRIHx5jJLHDDYfDF0poXOAw"
+ />
+
+
+2.修改AndroidManifest.xml文件
+由于使用Google Map API，所以必须添加<uses-library android:name="com.google.android.maps" />
+由于需要从网络获取地图数据，所以需要访问网络的权限<uses-permission android:name="android.permission.INTER
+
+4.实现MapActivity
+MapView需要由MapActivity来管理，所以程序部分应该继承自MapActivity类，必须实现isRouteDisplay方法。
+MapView提供了3中模式的地图，分别可以通过以下方式设置采用什么模式来显示地图。
+      mMapView.setTraffic(true); //设置为交通模式 
+      mMapView.setSatellite(true); //设置为卫星模式//
+     mMapView.setStreetView(false)； //设置为街景模式
+通过setBuiltZoomControls方法设置地图是否支持缩放
+
+
+
+5.MapController的使用
+如果需要设置地图显示的地点以及放大倍数等，就需要使用MapController来控制地图。可以通过如下代码获得MapController对象：
+mMapController = mMapView.getController(); 
+要定位地点，需要构造一个GeoPoint来表示地点的经纬度，然后使用animateTo方法将地图定位到指定的GeoPoint上，代码如下：
+//设置起点为成都
+mGeoPoint = new GeoPoint((int) (30.659259 * 1000000), (int) (104.065762 * 1000000));
+//定位到成都
+mMapController.animateTo(mGeoPoint); 
+
+
+6.Ovelay的使用
+如果需要在地图上标注一些图标文字等信息，就需要使用Overlay。这里我们首先要将地图上的经度和纬度转换成屏幕上的实际坐标，才能将信息绘制上去。Map API中提供了Projection.toPixels(GeoPoint in，GeoPoint out)方法，可以将经度和纬度转换成屏幕上的坐标。
+首先需要实现OverLay中的draw方法才能在地图上绘制信息，代码如下：
+
+class MyLocationOverlay extends Overlay
+{
+     @Override
+     public boolean draw(Canvas canvas, MapView mapView, boolean shadow, long when)
+     {
+             ........
+     }
+}

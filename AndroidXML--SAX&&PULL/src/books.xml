@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book id="23">
+		<name>C++ Primer 4</name>
+		<price>78</price>
+ 	</book>
+    <book id="20">
+		<name>Think in Java</name>
+		<price>80</price>
+	</book>
+
+</books>

@@ -1,0 +1,30 @@
+public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+
+           if(mCheckBoxView.isChecked()){
+
+              //文本正常显示
+
+             mEditTextView.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
+              Editable etable = mEditTextView.getText();
+
+              Selection.setSelection(etable, etable.length());
+
+           }else{
+
+              //文本以密码形式显示
+
+              mEditTextView.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+
+              //下面两行代码实现: 输入框光标一直在输入文本后面
+
+              Editable etable = mEditTextView.getText();
+
+              Selection.setSelection(etable, etable.length());
+
+           }
+
+        } 
+
+    };
+

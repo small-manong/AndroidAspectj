@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Sample_6_4!</string>
+    <string name="app_name">Sample_6_4</string>
+    <string name="btn">显示列表对话框</string>							<!-- 声明名为btn的字符串资源 -->
+    <string name="title">列表对话框</string>					<!-- 声明名为title的字符串资源 -->
+</resources>

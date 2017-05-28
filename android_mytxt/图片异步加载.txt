@@ -1,0 +1,13 @@
+为什么要异步加载图片
+提升用户体验。
+
+
+SoftReference的作用及使用方法
+SoftReference <Object> sr = new SoftReference<Object>(new Object());
+当虚拟内存不足时，垃圾回收它，内存充足时，垃圾不回收它。如果使用对象时，可以通过Object obj =sr.get方法调用它，如果已经回收了get方法返回null。
+
+缓存是什么？缓存设计以一个专门的学问，还有很多厉害的！
+异步加载图片流程
+获取图片URL——》查询缓存——》访问缓存或者访问网络——》得到图像对象——》显示图片
+
+异步加载图片的方法

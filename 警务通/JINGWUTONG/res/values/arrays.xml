@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="faulttype">
+        <item>超速</item>
+        <item>闯红灯</item>
+        <item>违规停车</item>
+        <item>无证驾驶</item>
+        </array>
+    <array name="filetype"> 
+        <item>现场照片上传</item>
+        <item>语音上传</item>
+        <item>文件上传</item>
+        </array>
+    <array name="gpslist">
+	<item>我的位置</item>
+	<item>按坐标查询</item>
+	<item>按地址查询</item>
+	<item>跟踪轨迹</item>
+</array>
+</resources>

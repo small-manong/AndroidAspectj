@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="textView">请选择下列动物中的一种</string><!-- 定义字符串textView-->
+    <string name="app_name">Sample_7_6</string><!-- 定义字符串app_name-->
+</resources>

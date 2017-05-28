@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/drawable_main_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TableRow android:layout_height="84px" >
+
+                <ImageView
+                    android:layout_width="72px"
+                    android:layout_height="72px"
+                    android:layout_marginBottom="3px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="8px"
+                    android:layout_marginTop="12px"
+                    android:src="@drawable/drawable_main_settings_up" />
+
+                <ImageView
+                    android:layout_width="72px"
+                    android:layout_height="72px"
+                    android:layout_marginBottom="3px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="8px"
+                    android:layout_marginTop="12px"
+                    android:src="@drawable/drawable_main_history_up" />
+
+                <ImageView
+                    android:layout_width="72px"
+                    android:layout_height="72px"
+                    android:layout_marginBottom="3px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="8px"
+                    android:layout_marginTop="12px"
+                    android:src="@drawable/drawable_main_help_up" />
+
+                <ImageView
+                    android:layout_width="72px"
+                    android:layout_height="72px"
+                    android:layout_marginBottom="3px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="8px"
+                    android:layout_marginTop="12px"
+                    android:src="@drawable/drawable_main_client_up" />
+            </TableRow>
+
+            <TableRow android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_marginLeft="35px"
+                    android:layout_marginRight="20px"
+                    android:text="设置中心"
+                    android:textColor="@color/black"
+                    android:textSize="11px" />
+
+                <TextView
+                    android:layout_marginLeft="35px"
+                    android:layout_marginRight="20px"
+                    android:text="病例管理"
+                    android:textColor="@color/black"
+                    android:textSize="11px" />
+
+                <TextView
+                    android:layout_marginLeft="43px"
+                    android:layout_marginRight="20px"
+                    android:text="帮助"
+                    android:textColor="@color/black"
+                    android:textSize="11px" />
+
+                <TextView
+                    android:layout_marginLeft="40px"
+                    android:layout_marginRight="20px"
+                    android:text="客户端"
+                    android:textColor="@color/black"
+                    android:textSize="11px" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TableRow>
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="143px"
+                    android:layout_height="75px"
+                    android:layout_marginLeft="43px"
+                    android:layout_marginTop="20px"
+                    android:background="@drawable/drawable_main_clock_bg"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="133px"
+                        android:layout_height="50px"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4px"
+                        android:background="@drawable/clock_time_bg"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="27px"
+                            android:layout_height="50px"
+                            android:layout_marginLeft="30px"
+                            android:src="@drawable/clock_2" />
+
+                        <ImageView
+                            android:layout_width="10px"
+                            android:layout_height="45px"
+                            android:layout_gravity="center"
+                            android:src="@drawable/colock_dot" />
+
+                        <ImageView
+                            android:layout_width="27px"
+                            android:layout_height="50px"
+                            android:src="@drawable/clock_3" />
+
+                        <ImageView
+                            android:layout_width="27px"
+                            android:layout_height="50px"
+                            android:layout_marginLeft="4px"
+                            android:src="@drawable/clock_6" />
+                    </LinearLayout>
+                    <!-- android:background="@drawable/clock_time" -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8px"
+                        android:layout_marginTop="2px"
+                        android:text="2012/04/18    星期三"
+                        android:textColor="@color/blue"
+                        android:textSize="11px"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50px"
+                    android:layout_height="26px"
+                    android:layout_marginLeft="28px"
+                    android:layout_marginTop="24px"
+                    android:scaleType="fitXY"
+                    android:scrollX="20px"
+                    android:src="@drawable/drawable_main_3g_full" />
+
+                <ImageView
+                    android:layout_width="20px"
+                    android:layout_height="20px"
+                    android:layout_marginTop="24px"
+                    android:src="@drawable/drawable_main_wifi_full" />
+
+                <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="26px"
+                    android:layout_marginLeft="8px"
+                    android:layout_marginTop="25px"
+                    android:src="@drawable/drawable_main_bluetooth_on" />
+
+                <ImageView
+                    android:layout_width="44px"
+                    android:layout_height="26px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="24px"
+                    android:src="@drawable/drawable_main_power_full" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="396px"
+        android:layout_marginTop="25px"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="396px"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/drawable_main_center_wave_bg" />
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+	<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_marginLeft="20px"
+        android:layout_width="150px"
+        android:layout_height="50px"
+        android:background="@color/graywhite"
+        android:orientation="horizontal" >
+            <TextView 
+            android:layout_width="20px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:text="走速"
+            android:textColor="@color/line"
+            android:textSize="18px" 
+                />
+        <Spinner
+            android:id="@+id/wolkspead"
+            android:layout_width="88px"
+            android:layout_height="50px"
+            android:entries="@array/walkspeed"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="15px" />
+        <ImageView
+            android:layout_width="24px"
+            android:layout_height="50px"
+			android:layout_gravity="center_vertical"
+            android:src="@drawable/drawable_select_right_button" />
+		</LinearLayout>
+		<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_marginLeft="10px"
+        android:layout_width="150px"
+        android:layout_height="50px"
+        android:background="@color/graywhite"
+        android:orientation="horizontal" >
+            <TextView 
+            android:layout_width="20px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:text="增益"
+            android:textColor="@color/line"
+            android:textSize="18px" 
+                />
+        <Spinner
+            android:id="@+id/wolkspead"
+            android:layout_width="88px"
+            android:layout_height="50px"
+            android:entries="@array/addgood"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="15px" />
+        <ImageView
+            android:layout_width="24px"
+            android:layout_height="50px"
+			android:layout_gravity="center_vertical"
+            android:src="@drawable/drawable_select_right_button" />
+		</LinearLayout>
+		<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_marginLeft="10px"
+        android:layout_width="150px"
+        android:layout_height="50px"
+        android:background="@color/graywhite"
+        android:orientation="horizontal" >
+            <TextView 
+            android:layout_width="20px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:text="波率"
+            android:textColor="@color/line"
+            android:textSize="18px" 
+                />
+        <Spinner
+            android:id="@+id/wolkspead"
+            android:layout_width="88px"
+            android:layout_height="50px"
+            android:entries="@array/walkspeed"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="15px" />
+        <ImageView
+            android:layout_width="24px"
+            android:layout_height="50px"
+			android:layout_gravity="center_vertical"
+            android:src="@drawable/drawable_select_right_button" />
+		</LinearLayout>
+
+        <Button
+            android:layout_width="82px"
+            android:layout_height="50px"
+            android:layout_marginLeft="4px"
+            android:background="@drawable/drawable_settings_app_back_up"
+            android:text="心电分析"
+            android:textColor="@color/line"
+            android:textSize="18px" />
+
+        <Button
+            android:layout_width="82px"
+            android:layout_height="50px"
+            android:layout_marginLeft="4px"
+            android:background="@drawable/drawable_settings_app_back_up"
+            android:text="信息录入"
+            android:textColor="@color/line"
+            android:textSize="18px" />
+
+        <Button
+            android:layout_width="82px"
+            android:layout_height="50px"
+            android:layout_marginLeft="4px"
+            android:background="@drawable/drawable_main_bottom_wavespeed_item_press"
+            android:text="输  出"
+            android:textColor="@color/line"
+            android:textSize="18px" />
+    </LinearLayout>
+
+</LinearLayout>

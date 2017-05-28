@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World</string>
+    <string name="app_name">abc</string>
+       <string name="next">下一张</string>
+    <string name="previous">上一张</string>
+    <string name="alpha_plus">透明度增加</string>
+    <string name="alpha_minus">透明度减少</string>
+</resources>

@@ -1,0 +1,19 @@
+当我们调用DatabaseHelper类的getWritableDatabase()或者getReadableDatabase()方法的时候，都会导致数据库的生成。
+这两个方法区别getReadableDatabase()可以只读方式打开数据库、当磁盘满的时候就会打开失败失败之后就会尝试以只读方式打开数据库，而getWritableDatabase()是以打开或者创建数据库。
+
+public void save(Person person){
+SQLiteDatebase db=databaseHelper.getWritableDatabase();
+db.execSQL("insert into person(name,age) values('Tom','21')");
+}
+很多时候使用这种方式执行增删改查数据：
+publci void update(Person person){
+	SQLiteDatebase db=databaseHelper.getWritableDatabase();
+	db.execSQL(update person set name=?,age=?, where personid=?",new Object[ ] {person.getName(),person.getAge(),person.getId()});
+
+}
+
+查询方法：public Person find(Integer id){
+	SQLiteDatebase db=databaseHelper.getWritableDatabase();
+	
+
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Xiaoguo</string>
+    <string-array name="walkspeed" >
+        <item >5mm/s</item>
+        <item >10mm/s</item>
+        <item >50mm/s</item>
+    </string-array>
+    <string-array name="addgood" >
+        <item >5mm/mv</item>
+        <item >20mm/mv</item>
+        <item >30mm/mv</item>
+        <item >40mm/mv</item>
+    </string-array>
+    <string-array name="jidian" >
+        <item >肌电  50</item>
+        <item >肌电  100</item>
+        <item >肌电  200</item>
+        <item >肌电  250</item>
+    </string-array>
+    
+    
+</resources>

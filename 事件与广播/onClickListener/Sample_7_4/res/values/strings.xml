@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Sample_7_4</string>
+    <string name="textView01">您没有点击任何按钮</string>
+    <string name="button01">按钮1</string>
+    <string name="button02">按钮2</string>
+    <string name="button03">按钮3</string>
+    <string name="button04">按钮4</string>
+</resources>

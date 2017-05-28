@@ -1,0 +1,25 @@
+ 连接数据库时通常写一个工具类:DBUtils，一般都把它设置成单例模式。
+class DBUtils{
+
+private DBUtils(){}
+private static DBUtils instance =null;
+
+public synchronized static DBUtils getInstance(){
+	if(instance==null){
+		instance =new DBUtils();
+		}	
+	return instance;
+	}
+
+
+}
+//一次本机上连接1000次数据库然后关闭的时间很长，所以需要数据库连接池
+把已经连接好数据库的连接放到一个池里面用的时候直接用，直接管理连接池。
+一般的两种方式：
+1.DBCP方式：两个jar包commons-dbcp,commons-pool.jar
+两个成员变量：一个连接信息，一个连接池。
+DBCP经常出现连接丢失的问题，现在用的非常比较少，用的多的是C3P0方式
+2.C3P0方式：需要c3po.jar
+它只需要一个变量：ComboPooledDataSource 。
+所有的配置都使用它的属性进行配置。
+c3p0的连接稳定。

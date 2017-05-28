@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, AlertDialogActivity!</string>
+    <string name="app_name">警告对话框</string>
+    <string name="button">弹出对话框</string>
+
+</resources>

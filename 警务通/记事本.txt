@@ -1,0 +1,8 @@
+系统用户表 usertabl
+在逃人口表 escapedpeopletbl
+机动车违章信息表vehicleinfotbl
+上传文件表uploadfiletbl
+数据库的名字 police_db
+
+通过手机客户端连接web服务执行的有：
+登录页面，查询在逃人员，机动车违章添加，文件上传（照片上传），

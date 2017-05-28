@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Sample_5_7!</string>
+    <string name="app_name">Sample_5_7</string>
+    <string name="andy">Android的创造者: Andy Rubin</string>
+    <string name="bill">Java创造者之一: Bill Joy</string>
+    <string name="linux">Linux之父: Linus Torvalds</string>    
+</resources>

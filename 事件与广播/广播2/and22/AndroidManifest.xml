@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.cn" android:versionCode="1" android:versionName="1.0">
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+		<activity android:name=".Main" android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<receiver android:name=".My1">
+			<intent-filter android:priority="1000">
+				<action android:name="abc" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</receiver>
+
+
+		<receiver android:name=".My2">
+			<intent-filter android:priority="999">
+				<action android:name="abc" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</receiver>
+
+
+		<receiver android:name=".My3">
+			<intent-filter  android:priority="998">
+				<action android:name="abc" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</receiver>
+
+
+	</application>
+	<uses-sdk android:minSdkVersion="8" />
+	  <permission android:protectionLevel="normal"  
+            android:name="scott.permission.MY_BROADCAST_PERMISSION" />  
+    <uses-permission android:name="scott.permission.MY_BROADCAST_PERMISSION" /> 
+
+</manifest> 

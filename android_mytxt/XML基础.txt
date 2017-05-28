@@ -1,0 +1,7 @@
+<?xml version="1.0"encoding="gb2312"?>
+ˉ<person>
+<name>?伎</name>
+<college>????</college>
+<telephone>2663457</telephone>
+<title >??</title >
+</person>

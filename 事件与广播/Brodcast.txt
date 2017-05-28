@@ -1,0 +1,21 @@
+BroadcastReveiver广播实现
+子类继承它 实现它的功能：需要静态注册和动态注册
+activity注销的时候需要解除它否则出异常；
+覆盖onDestroy方法，this.unregisterRecerver(c,f);
+
+action intent 
+
+而不是启动别的 Activity.StartActivity(intent)就会立即启动这个Activity.而PendingIntent呢?Penging中文意思就是：待定，将来发生或来临。PendingIntent的就的意思就是不是像Intent那样立即发生，而是在合适的时候才会去触发对应的 Intent.有人说这个intent不是你的ap来触发而是交给别的ap来触发。你可以看以下的code来理解：
+
+多个广播的优先级，级别高的管理发送到级别低的，或者阻塞住不发广播；可以调整级别 数越大级别越高1~1000；
+有序广播需要给他权限；
+abortBroadcast();阻塞下面的方法；
+
+IntentReceiver:
+当你希望你的应用能够对一个外部的事件(如当电话呼入时，或者数据网络可用时，或者到了晚上时)做出响应，你可以使用一个IntentReceiver。虽然IntentReceiver在感兴趣的事件发生时，会使用NotificationManager通知用户，但它并不能生成一个UI。IntentReceiver在AndroidManifest.xml中注册，但也可以在代码中使用Context.registerReceiver()进行注册。当一个intentreceiver 被触发时，你的应用不必对请求调用intentreceiver，系统会在需要的时候启动你的应用。各种应用还可以通过使用Context.broadcastIntent()将它们自己的intentreceiver 广播给其它应用程序。
+
+
+intent
+Android中的Intent通过Action,Category和data等属性进行了相应的描述，我们想做某些事情（达成某些目标），就需要填写这些参数的部分或全部，这样Android才会帮助我们自动的去进行某些操作。IntentFilter是配合Intent而生的，你有目标行动或者结果，那么那些行动和结果就会有他完成的特定要求，这些要求就是IntentFilter，可以理解为Intent和IntentFilter是相对应的。
+
+在Filter配置中CATEGORY_DEFAULT是不可缺少的，想调用这个Service，可以不指定Class，但其他条件必须匹配(CATEGORY_DEFAULT可以不设置，Android默认会自动加上)，通过Action,category和data就可以调用相应的Activity了，这是Android帮你做的，当然如果系统中存在多个匹配这些条件的Activity或者Service，Android根据优先级进行调用。

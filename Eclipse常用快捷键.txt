@@ -1,0 +1,22 @@
+6.Eclipse常用快捷键:
+Ctrl+Enter:跳到下一行行首
+Alt+Shift+X+J:运行当前程序
+Ctrl+F11:运行上次编译过的程序
+Shift+Ctrl+F:格式化代码
+Shift+Ctrl+X:将所选字符转为大写 
+Shift+Ctrl+Y:将所选字符转为小写 
+Ctrl+1:迅速定位错误处理
+Ctrl+M:快速对当前视图最大化 
+Alt+Shift+S:快速显示Source选项
+Ctrl+鼠标停留:可以显示类和方法的源码 
+Ctrl+Shift+S:保存全部 
+Control +F6 或Control +E 个打开文件间切换
+Control +1 错误解决方案
+导入包：Control+Shift+0
+打开类Control+Shift+T
+打开文件：Control+Shift+R
+各视图间切换Control+F7
+查看类的属性和方法（快速定位类属性方法）Control+O
+查看类的等级结构 Control+T
+查看接口的实现类F4
+!注意：写程序键盘永远比鼠标快，要刻意的使用

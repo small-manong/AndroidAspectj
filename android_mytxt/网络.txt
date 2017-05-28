@@ -1,0 +1,25 @@
+SD卡的设置：
+命令行中输入 mksdcard -l sdcard 50M d:/zhang.img
+-sdcard d:\zhang.img 在Target调试器中
+adb push t.txt sdcard/zhang
+
+
+ServerSocket ss = new ServerSocket(30000);
+Socket s = ss.accept();
+OutputStream os = s.getOutputStream();
+
+通过IO流来进行socket编程：0~65535个端口。
+
+每连接一个线程都放到一个线程组里面。
+
+加入多线程 
+
+Http:远程获得数据在android显示。
+android客户端 访问web服务器。
+后边的内容基本上没什么用了！
+现在还感受不到版本的信息，以后真开发的时候就会的。
+这个是以前的话我都忘记了。
+意力好的话给我一个月时间学成iphone开发。
+学习下webservice
+下载文件的实现：
+高级浏览器的实现：加上按钮向前，向后，等功能。

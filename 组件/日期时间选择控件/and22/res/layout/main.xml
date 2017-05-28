@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+		<DatePicker
+		android:id="@+id/datepicker"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"	
+		/>					<!-- 声明了一个DataPicker控件 -->
+	<EditText
+		android:id="@+id/etDate"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:cursorVisible="false"
+		android:editable="false"
+		/><!-- 声明了一个用于显示日期的EditText控件 -->
+	<TimePicker
+		android:id="@+id/timepicker"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"	
+		/>					<!-- 声明了一个TimePicker控件 -->
+	<EditText
+		android:id="@+id/etTime"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:cursorVisible="false"
+		android:editable="false"
+		/><!-- 声明了一个用于显示时间的EditText控件 -->
+</LinearLayout>

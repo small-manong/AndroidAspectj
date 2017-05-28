@@ -1,0 +1,11 @@
+广播的两种实现方式：
+
+1.在Manifest里面注册的广播只要安装应用程序就会一直监听下去
+
+2.实时的注册广播需要什么时候监听就什么侯监听（重要）
+一般是在activity可见的时候让其监听广播
+activity.registerReceiver(receiver,intentfilter);
+activity.UnRegisterReceiver(receiver,intentfilter);
+
+测试的时候在DDMS里面可以给模拟器发送短信或彩信；
+

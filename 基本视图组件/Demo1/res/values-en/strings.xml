@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Main!</string>
+    <string name="app_name">d1</string>
+    <string name="bstart">start</string>
+      <string name="babout">about</string>
+        <string name="bhelp">help</string>
+          <string name="bexit">exit</string>
+          
+            <string name="aboutcontent">This is Help Page</string>
+              <string name="breturn">return</string>
+    
+    
+</resources>

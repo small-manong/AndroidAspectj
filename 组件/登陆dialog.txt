@@ -1,0 +1,23 @@
+
+在实际开发种LayoutInflater这个类还是非常有用的,它的作用类似于 findViewById(),
+不同点是LayoutInflater是用来找layout下xml布局文件，并且实例化！而findViewById()是找具体xml下的具体 widget控件(如:Button,TextView等)。
+
+AlertDialog.Builder builder;   
+AlertDialog alertDialog;   
+Context mContext = LayoutInflaterDemoActivity.this;  
+
+
+  //下面三种方法都可以   
+    //方法一
+    //    LayoutInflater inflater = getLayoutInflater();   
+   
+    //方法二
+    //    LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(LAYOUT_INFLATER_SERVICE);   
+    //   View layout = inflater.inflate(R.layout.custom_dialog,null);    
+       //方法三
+      View layout = View.inflate(this,R.layout.custom_dialog,null);
+
+builder = new AlertDialog.Builder(mContext);   
+       builder.setView(layout);    
+       alertDialog = builder.create();   
+        alertDialog.show();    

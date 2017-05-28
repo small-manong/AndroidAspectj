@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Main!</string>
+    <string name="app_name">d1</string>
+    <string name="bstart">开始</string>
+      <string name="babout">关于</string>
+        <string name="bhelp">帮助</string>
+          <string name="bexit">退出</string>
+          
+            <string name="aboutcontent">这里是帮助的内容页面</string>
+              <string name="breturn">返回</string>
+    
+    
+</resources>

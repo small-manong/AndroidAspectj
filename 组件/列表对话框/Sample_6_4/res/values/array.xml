@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="msa">		<!-- 声明一个字符串数组 -->
+     <item>游泳</item>			<!-- 向数组中加入元素 -->
+     <item>打篮球</item>			<!-- 向数组中加入元素 -->
+     <item>写Java程序</item>		<!-- 向数组中加入元素 -->
+  </string-array>
+</resources>

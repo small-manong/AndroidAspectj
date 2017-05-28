@@ -1,0 +1,62 @@
+EditText.setTransformationMethod():方法实现文本框的显示密文明文的切换；
+
+自定义视图：
+国际化还要写上，名字的书写要见名识义
+用initListener实现返回主页面，昨天不会回到主页面。
+这个方法里面重新初始化，划界面。
+//ScrollView 和View的区别
+贪食蛇的游戏实现：
+	自定义视图 ：Myview extends View{
+	定义好视图对象以后，必须在构造方法内实现上下文的引用
+	public Myview(Context context){
+	super(context)
+	}
+还需要配置一个构造器：
+	public GameView(Context context,AttributeSet paramAttributeSet)
+	 {
+	       super(context,paramAttributeSet);
+	       this.setFocusable(true); 
+	 }
+
+画2D图像必须做的几个步骤：
+	protexted void onDraw(Canvas canvas){
+		super.onDraw(canvas)
+		/*
+
+1.定义一个画笔
+2调用画的方法，去画几何图形
+	`	*/
+		paint p=new Paint();
+		p.setARGB(70,255,0,0);
+		canvas.drawRect(0,0,this.getWidth(),this.getHeight,p);
+		}
+	}
+//面板如何调用自定义视图的对象：
+1.传入对象的引用
+2.建立一个game.xml 里面放置<com.cn.MyView />，到这里会出现异常
+注意绑定activity的时候要写一个构造方法来实现这个MyView
+再画个蛇头（巨型），产生动作
+	onKeyDown();onToutchEvent();
+	输出日志：log.d("x",""+event.getX());log.d("y",""+getY());
+	int px ,py;
+         //移动的自定义视图在新的位置出现的时候必须重绘1次才可以
+	this.invalidate();
+这里的算法、java基础。
+Log.d("你的code值",""+keyCode);测试键盘的code值
+实现上下左右的移动监听
+this.invalidate();来进行重绘；
+
+一旦自定义视图的时候按钮事件就失效了，需要方法重新实现它
+构造里：this.setFocusable(this);
+有时需要特使布局：Absolutelayout
+
+
+
+
+
+
+
+
+
+
+

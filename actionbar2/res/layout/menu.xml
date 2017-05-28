@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_add"
+          android:icon="@drawable/l"
+          android:title="actinobarlllll"
+          android:showAsAction="ifRoom|withText" />
+    <item android:id="@+id/menu_search"
+    android:title="Search"
+    android:icon="@drawable/pencil"
+    android:showAsAction="ifRoom|withText"
+    android:actionLayout="@layout/searchview" />
+</menu>

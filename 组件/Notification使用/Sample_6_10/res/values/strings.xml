@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Sample_6_10!</string>
+    <string name="app_name">Sample_6_10</string>
+    <string name="btn">点击添加Notification</string>
+    <string name="tv">我是通过Notification启动的！</string>
+    <string name="notification">点击查看</string>
+</resources>

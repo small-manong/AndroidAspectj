@@ -1,0 +1,8 @@
+系统用户表 usertabl
+在逃人口表 escapedpeopletbl
+机动车违章信息表vehicleinfotbl
+上传文件表uploadfiletbl
+数据库的名字 police_db
+infoquery
+infocollect
+fileupload

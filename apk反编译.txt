@@ -1,0 +1,253 @@
+Android 反编译apk 到java源码的方法 
+分类： Android 2010-12-31 15:46 1931人阅读 评论(1) 收藏 举报 
+Apk文件破解可见源码 
+
+　　１． 获取apk的 资源 图片 
+
+         直接用 WinRAR打开，res/drawable直接拖拽出来即可。 
+
+　 ２．获取xml文件信息 
+
+    虽然能用WinRAR看到里面的xml文件，但是xml是经过优化的，无法直接查看，需要使用apktool 工具 ， 下载 地址： https://code.google.com/p/android-apktool/ 。 
+下载 apktool-1.3.1.tar.bz2和apktool-install-windows-2.2_r01-2.tar.bz2解压到同一个目录，然后把待破解的apk文件拷贝到同一目录，DOS在cmd下进入apktool所在路径，然后输入apktool d "XXX1" "XXX2",XXX1指的是你要反编译的apk文件，XXX2指的是反编译后文件存放的路径， 
+如：apktool d "C:/taobao.apk" "C:/taobao" 
+
+　 3 ．反 编译 dex获取 Java 源代码 
+         Apktool工具只能反编译成smali的中间代码文件，这里需要借助另外一个 开源 工具：dex2jar，下载地址： http://code.google.com/p/dex2jar/ 。这个工具不能直接翻译成java文件，但是可以把dex文件转换成jar文件，然后可以通过 jad工具把jar文件反编译成Java源文件，jd-gui下载地址： http://java.decompiler.free.fr/jd-gui/downloads/jd-gui-0.3.3.windows.zip  。 
+　　详细步骤：
+　　解压apk文件，直接拖拽(rar解压软件)，找到classes.dex文件 
+　　在cmd下进入dex2jar.bat所在路径， 
+　　然后输入“dex2jar.bat XXX”，XXX指的是你要反编译的apk中的classes.dex文件所在路径及名称(classes上面解压得到)， 
+　　如：dex2jar.bat D:/classes.dex； 
+　　这样会生成一个 classes.dex.dex2jar.jar文件，然后用jd-gui工具将jar文件反编译成java文件，选择保存所有，它会生成一个压缩文件，所有的源码都在这个压缩文件中，解压了就可以看到详细的代码了。很强大吧。 
+from：http://hi.baidu.com/eblson/blog/item/312de07b5e594dff2f73b353.html 
+-----------------------------------------
+一、获得APK源代码： 
+工具下载 ：需用到 dex2ja r 和 JD-GUI 这 2 个工具 
+dex2jar 下载地址 ： http://laichao.googlecode.com/files/dex2jar-0.0.7-SNAPSHOT.zip 
+JD-GUI 下载地址： 
+  windows 版 JD-GUI ： http://laichao.googlecode.com/files/jdgui.zip 
+  Linux 版 JD-GUI ： http://laichao.googlecode.com/files/jd-gui-0.3.2.linux.i686.tar.gz 
+步骤： 
+1. 把 apk 文件改名为 .zip ，然后解压缩 , 得到其中的 classes.dex 文件，它就是 java 文件编译后再通过 dx 工具打包成的 , 所以现在我们就用上述提到的 2 个工具来逆方向导出 java 源文件 
+
+2. 把 classes.dex 拷贝到 dex2jar.bat 所在目录。 
+在命令行模式下定位到 dex2jar.bat 所在目录，运行 dex2jar.batclasses.dex   ，生成 classes.dex.dex2jar.jar 
+
+3. 运行 JD-GUI 工具（它是绿色无须安装的） 
+打开上面的 jar 文件，即可看到源代码 
+--------------------------------------------------------------------------------- 
+二 . 反编译 apk 生成程序的源代码和图片、 XML 配置、语言资源等文件。 
+工具下载： 
+在 http://code.google.com/p/android-apktool/ 下 载获得， apktool-1.0.0.tar.bz2 和 apktool-install-windows-2.1_r01-1.zip 两个包 。 
+ 
+1. 解压缩下载的两个文件包， apktool-install-windows-2.1_r01-1.zip 解压缩后得到的包里有 aapt.exe 和 apktool.bat. （注意要把 apktool-1.0.0.tar.bz2 解压后的一个 .jar 文件 copy 进来） 
+2. 打开命令窗口 （开始 > 运行，输入 cmd ，回车。）进入到 apktool.bat 的文件夹里。 
+          输入：   apktool dC:/***.apk  C:/*** 文件夹 
+（命令行解释： apktool d 要反编译的文件 输出文件夹） 
+特别注意：你要反编译的文件一定要放在 C 盘的根目录里， 
+3. 打开 C:/*** 文件夹 就可以得到我们学院的各种资源了。 
+from：http://www.apkbus.com/forum.php?mod=viewthread&tid=118 
+-------------------------------------------
+本文主要介绍如何逆向一个Android的APK应用程序，本文提供的方法仅供研究学习之用。
+本文需要用到的工具有
+jdk 这个用于搭建java运行环境
+AXMLPrinter2.jar  这个用于逆向.xml文件
+baksmali.jar 这个用于逆向classex.dex文件
+由于 Android 的 .apk 文件实际上就是一个 zip 文件 可以直接用 winrar 打开 
+如下图所示： 
+ 
+ 
+用rar打开之后 我们可以看到该文件实际上是一个zip包 里面包含了META-INF文件夹，这个文件夹是用于保存签名文件，确保包的完整性的
+res文件夹下就是apk所要用的资源文件，都是原封不动地保存，我们可以直接提取出来，做汉化时就可以直接阅读string文件然后进行修改
+ 
+AndroidManifest.xml文件则是编译过后的一个配置文件，用于声明程序中所包含的activity,service以及程序所具有的能力，也就是权限。resources.arsc则是编译过后的一个资源说明文件，而我们要关注的主要是classes.dex 。我们编写的Android程序，在源程序里的所有.java的文件，最终都编译到这样1个.dex文件当中，在Android手机上的dalvik虚拟机上执行。
+ 
+首先，我们介绍如何逆向一个.xml文件
+ 
+由于apk包里的xml文件我们直接用记事本打开还是有一些乱码
+所以需要我们还原才能更好的看出
+ 
+这里需要用到AXMLPrinter2.jar 工具
+ 
+具体的则是打开命令行 我们以AndroidManifest.xml为例，输入如下命令
+ 
+java -jar AXMLPrinter2.jar AndroidManifest.xml > AndroidManifest.txt
+ 
+有兴趣的也可以写成一个.bat的脚本，方便执行
+我们可以看看 执行的结果
+ 
+执行前的AndroidManifest.xml文件
+ 
+ 
+ 
+执行之后 我们可以再看看
+view plain copy to clipboard print ? 
+1.	<?xml version= "1.0"  encoding= "utf-8" ?>   
+2.	<manifest   
+3.	    xmlns:android="http://schemas.android.com/apk/res/android"    
+4.	    android:versionCode="322"    
+5.	    android:versionName="ver 3.2.2"    
+6.	    package="com.eoeandroid.wallpapers.christmas"    
+7.	    >   
+8.	    <application   
+9.	        android:label="@7F040000"    
+10.	        android:icon="@7F020004"    
+11.	        >   
+12.	        <activity   
+13.	            android:label="@7F040001"    
+14.	            android:name=".Main"    
+15.	            >   
+16.	            <intent-filter   
+17.	                >   
+18.	                <action   
+19.	                    android:name="android.intent.action.MAIN"    
+20.	                    >   
+21.	                </action>   
+22.	                <category   
+23.	                    android:name="android.intent.category.LAUNCHER"    
+24.	                    >   
+25.	                </category>   
+26.	            </intent-filter>   
+27.	        </activity>   
+28.	        <service   
+29.	            android:name=".service.SyncDeviceInfosService"    
+30.	            >   
+31.	        </service>   
+32.	        <meta-data   
+33.	            android:name="com.mobclix.APPLICATION_ID"    
+34.	            android:value="30c0e2bb-a878-43cb-830b-a39fcae33b0c"    
+35.	            >   
+36.	        </meta-data>   
+37.	    </application>   
+38.	    <uses-sdk   
+39.	        android:minSdkVersion="3"    
+40.	        >   
+41.	    </uses-sdk>   
+42.	    <uses-permission   
+43.	        android:name="android.permission.INTERNET"    
+44.	        >   
+45.	    </uses-permission>   
+46.	    <uses-permission   
+47.	        android:name="android.permission.SET_WALLPAPER"    
+48.	        >   
+49.	    </uses-permission>   
+50.	    <uses-permission   
+51.	        android:name="android.permission.WRITE_EXTERNAL_STORAGE"    
+52.	        >   
+53.	    </uses-permission>   
+54.	    <uses-permission   
+55.	        android:name="android.permission.ACCESS_NETWORK_STATE"    
+56.	        >   
+57.	    </uses-permission>   
+58.	    <uses-permission   
+59.	        android:name="android.permission.READ_PHONE_STATE"    
+60.	        >   
+61.	    </uses-permission>   
+62.	    <uses-permission   
+63.	        android:name="android.permission.ACCESS_NETWORK_STATE"    
+64.	        >   
+65.	    </uses-permission>   
+66.	</manifest>   
+view plaincopy to clipboardprint?
+1.	<?xml  
+2.	 version="1.0" encoding="utf-8"?>  
+3.	<manifest  
+4.	    xmlns:android="http://schemas.android.com/apk/res/android"  
+5.	    android:versionCode="322"  
+6.	    android:versionName="ver 3.2.2"  
+7.	    package="com.eoeandroid.wallpapers.christmas"  
+8.	    >  
+9.	    <application  
+10.	        android:label="@7F040000"  
+11.	        android:icon="@7F020004"  
+12.	        >  
+13.	        <activity  
+14.	            android:label="@7F040001"  
+15.	            android:name=".Main"  
+16.	            >  
+17.	            <intent-filter  
+18.	                >  
+19.	                <action  
+20.	                    android:name="android.intent.action.MAIN"  
+21.	                    >  
+22.	                </action>  
+23.	                <category  
+24.	                    android:name="android.intent.category.LAUNCHER"  
+25.	                    >  
+26.	                </category>  
+27.	            </intent-filter>  
+28.	        </activity>  
+29.	        <service  
+30.	            android:name=".service.SyncDeviceInfosService"  
+31.	            >  
+32.	        </service>  
+33.	        <meta-data  
+34.	            android:name="com.mobclix.APPLICATION_ID"  
+35.	            android:value="30c0e2bb-a878-43cb-830b-a39fcae33b0c"  
+36.	            >  
+37.	        </meta-data>  
+38.	    </application>  
+39.	    <uses-sdk  
+40.	        android:minSdkVersion="3"  
+41.	        >  
+42.	    </uses-sdk>  
+43.	    <uses-permission  
+44.	        android:name="android.permission.INTERNET"  
+45.	        >  
+46.	    </uses-permission>  
+47.	    <uses-permission  
+48.	        android:name="android.permission.SET_WALLPAPER"  
+49.	        >  
+50.	    </uses-permission>  
+51.	    <uses-permission  
+52.	        android:name="android.permission.WRITE_EXTERNAL_STORAGE"  
+53.	        >  
+54.	    </uses-permission>  
+55.	    <uses-permission  
+56.	        android:name="android.permission.ACCESS_NETWORK_STATE"  
+57.	        >  
+58.	    </uses-permission>  
+59.	    <uses-permission  
+60.	        android:name="android.permission.READ_PHONE_STATE"  
+61.	        >  
+62.	    </uses-permission>  
+63.	    <uses-permission  
+64.	        android:name="android.permission.ACCESS_NETWORK_STATE"  
+65.	        >  
+66.	    </uses-permission>  
+67.	</manifest>  
+   
+基本能还原的跟源程序大致相同
+这里我是拿的eoe出的一个墙纸程序为例
+ 
+ 
+ 
+接下来，大家肯定更加关心classes.dex的逆向
+ 
+这个其实跟之前那个也很相似
+采用baksmali.jar这个工具，国外一个对Android研究的很深入的大牛做的
+ 
+执行代码
+java -jar baksmali.jar -o classout/ classes.dex
+ 
+讲classes.dex能逆向成一个文件夹
+这里我可以截个图给大家看看
+ 
+ 
+ 
+点开其中一个文件 我们继续来看
+ 
+ 
+ 
+大家是不是觉得这个代码很亲切
+对  从这个代码我们基本能大致推断出源程序的一些结构流程
+从中借鉴
+ 
+ 
+本文仅供研究学习之用
+欢迎与我讨论交流
+ 
+ 
+本文地址如下 转载请注明此句
+

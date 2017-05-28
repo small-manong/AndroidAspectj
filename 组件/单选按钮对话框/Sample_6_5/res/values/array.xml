@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="msa">
+     <item>游泳</item>
+     <item>打篮球</item>
+     <item>写Java程序</item>
+  </string-array>
+</resources>

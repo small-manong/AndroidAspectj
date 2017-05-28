@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >										<!-- 声明一个线性布局 -->
+    <EditText 
+        android:text="" 
+        android:id="@+id/EditText01" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:cursorVisible="false"
+        />									<!-- 声明一个EditText控件 -->
+    <Button 
+        android:text="@string/btn"
+        android:id="@+id/Button01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />									<!-- 声明一个Button控件 -->
+</LinearLayout>

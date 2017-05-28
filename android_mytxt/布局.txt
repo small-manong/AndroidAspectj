@@ -1,0 +1,22 @@
+五种布局管理器：
+1.多个布局嵌套的时候要加上上优先级：layoutWeight="1"让他们相等就在一个面板上了否则会覆盖
+2.TableLayout /><TableRow>3个重要属性：
+表格收缩：shrinkcolumns="0"隐藏列：collapsecolumns="";是否拉伸：stretchColumns:""
+3.绝对布局：Absolutelayout 定义x,y坐标
+4.相对布局：RelativeLayout ,layout_toRightOf="" 有时候用起来很方便。
+5框架布局：FrameLayout,层叠放置在一起，或叫做帧布局；
+在一个指定的空间里使用组件进行填充；
+可以使用FrameLayout和FrameLayout.LayoutParams类手工配置布局；
+作业：
+霓虹灯的实现（多线程的实现）Handle???:启动和调用多线程。
+完成贪吃蛇的布局实现。
+
+
+Singleline:"true"单行显示，省略号显示（多出的内容）；
+layout_weight:控件占的linnearlayout的比例；
+weight的表现是很诡异的！意思上是权重。
+例子：
+<Button1 android:layout_width="" android:layout_weight="1">
+<Button1 android:layout_width="" android:layout_weight="2">
+在layout_width設置為fill_parent的時候，layout_weight所代表的是你的控件要優先盡可能的大,但這個大是有限度的，即fill_parent.
+在layout_width設置為wrap_content的時候，layout_weight所代表的是你的控件要優先盡可能的小,但這個小是有限度的，即wrap_content.layout_height 同 layout_width.

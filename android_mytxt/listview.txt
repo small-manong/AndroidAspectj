@@ -1,0 +1,9 @@
+ ListView列表的显示需要三个元素：
+1．ListVeiw 用来展示列表的View。
+2．适配器 用来把数据映射到ListView上的中介。
+3．数据    具体的将被映射的字符串，图片，或者基本组件。
+根据列表的适配器类型，列表分为三种，ArrayAdapter，SimpleAdapter和SimpleCursorAdapter
+其中以ArrayAdapter最为简单，只能展示一行字。SimpleAdapter有最好的扩充性，可以自定义出各种效果。SimpleCursorAdapter可以认为是SimpleAdapter对数据库的简单结合，可以方面的把数据库的内容以列表的形式展示出来。
+
+SimpleCursorAdapter
+　　sdk的解释是这样的：An easy adapter to map columns from a cursor to TextViews or ImageViews defined in an XML file. You can specify which columns you want, which views you want to display the columns, and the XML file that defines the appearance of these views。简单的说就是方便把从游标得到的数据进行列表显示，并可以把指定的列映射到对应的TextView中。

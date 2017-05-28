@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout android:id="@+id/linearLayout01"
+        android:layout_width="fill_parent"  android:layout_height="fill_parent"
+        android:gravity="center_horizontal"  android:orientation="vertical">
+		<ImageView 
+	   		android:id="@+id/ImageView01" 
+	   		android:scaleType="fitXY"
+	   		android:layout_gravity="center"
+	   		android:layout_width="wrap_content"
+	  		android:layout_height="wrap_content"
+	  		android:src="@drawable/andy"/>
+	  	<TextView
+	  		android:id="@+id/TextView01"
+	  		android:layout_width="wrap_content" 
+	    	android:layout_height="wrap_content"
+        	android:textSize="24dip"
+        	android:text="@string/andy"/>
+   </LinearLayout>    
+    <LinearLayout android:id="@+id/linearLayout02"
+        android:layout_width="fill_parent"  android:layout_height="fill_parent"
+        android:gravity="center_horizontal"  android:orientation="vertical" >
+		<ImageView 
+	   		android:id="@+id/ImageView02" 
+	   		android:scaleType="fitXY"
+	   		android:layout_gravity="center"
+	   		android:layout_width="wrap_content"
+	  		android:layout_height="wrap_content"
+	  		android:src="@drawable/bill"/>
+	  	<TextView
+	  		android:id="@+id/TextView02"
+	  		android:layout_width="wrap_content" 
+	    	android:layout_height="wrap_content"
+        	android:textSize="24dip"
+        	android:text="@string/bill"/>
+   </LinearLayout> 
+          <LinearLayout android:id="@+id/linearLayout03"
+        android:layout_width="fill_parent"  android:layout_height="fill_parent"
+        android:gravity="center_horizontal"  android:orientation="vertical">
+		<ImageView 
+	   		android:id="@+id/ImageView03" 
+	   		android:scaleType="fitXY"
+	   		android:layout_gravity="center"
+	   		android:layout_width="wrap_content"
+	  		android:layout_height="wrap_content"
+	  		android:src="@drawable/torvalds"/>
+	  	<TextView
+	  		android:id="@+id/TextView03"
+	  		android:layout_width="wrap_content" 
+	    	android:layout_height="wrap_content"
+        	android:textSize="24dip"
+        	android:text="@string/linux"/>
+   </LinearLayout> 
+</FrameLayout>

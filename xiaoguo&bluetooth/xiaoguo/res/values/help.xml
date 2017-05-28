@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string-array name="helptitle" >
+        <item >快捷操作</item>
+        <item >导联安放</item>
+        <item >DEMO演示</item>
+        <item >使用说明</item>
+        <item >常见故障</item>
+        <item >操作示范</item>
+        <item >厂商信息</item>
+    </string-array>
+    <string name="kuaijie">快捷操作</string>
+    <string name="daolian">导联安放</string>
+    <string name="demo">DEMO演示</string>
+    <string name="shiyong">使用说明</string>
+    <string name="changjian">常见故障</string>
+    <string name="caozuo">操作示范</string>
+    <string name="changshang">厂商信息</string>
+</resources>

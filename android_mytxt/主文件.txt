@@ -1,0 +1,34 @@
+android权限：
+发短信、读取短信
+打电话
+使用蓝牙
+写入数据
+网络权限
+Google 服务
+照相设备，闪光灯
+
+图片资源读取
+       XML与Java两种方式
+setImageBitmap(BitmapFactory.decodeResource
+(this.getResources(),R.drawable.img))
+声音资源读取
+        raw文件夹
+        MediaPlayer
+ 
+MediaPlayer mp3=MediaPlayer.create(this,R.raw.sound);
+             mp3.start();
+ 练习：用ImageView对象完成2张以上的图片显示
+
+
+课程重点：
+目录结构
+资源文件使用
+AndroidManifest.xml
+应用程序权限
+生命周期
+Activity 
+Service  
+BroadcastReceiver 
+ContentProvider 
+Intent和IntentFilter
+

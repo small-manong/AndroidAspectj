@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="textView">使用键盘中的ABCD键控制四个按钮</string><!-- 定义字符串textView-->
+    <string name="app_name">Sample_7_7</string><!-- 定义字符串app_name-->
+</resources>

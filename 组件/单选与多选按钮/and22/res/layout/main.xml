@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+		<ImageView 
+		android:id="@+id/ImageView01" 
+		android:src="@drawable/bulb_off"
+      	android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_gravity="center_horizontal">      
+    	</ImageView>								<!-- 声明一个ImageView控件 -->
+	<RadioGroup 
+       	android:id="@+id/RadioGroup01" 
+       	android:orientation="horizontal"
+       	android:layout_width="wrap_content" 
+       	android:layout_height="wrap_content"
+       	android:layout_gravity="center_horizontal">			<!-- 声明一个RadioGroup控件 -->
+      	<RadioButton 
+         	android:text="@string/off" 
+         	android:id="@+id/off" 
+         	android:checked="true"
+         	android:layout_width="wrap_content" 
+         	android:layout_height="wrap_content">	
+      	</RadioButton>   								<!-- 声明一个RadioButton控件 -->
+      	<RadioButton 
+         	android:text="@string/on" 
+         	android:id="@+id/on" 
+         	android:layout_width="wrap_content" 
+         	android:layout_height="wrap_content">
+      	</RadioButton>  								<!-- 声明一个RadioButton控件 -->
+  	</RadioGroup>
+  	<CheckBox 
+     	android:text="@string/on"
+     	android:id="@+id/CheckBox01" 
+     	android:layout_width="wrap_content" 
+     	android:layout_height="wrap_content"
+     	android:layout_gravity="center_horizontal">
+  	</CheckBox>      				
+</LinearLayout>

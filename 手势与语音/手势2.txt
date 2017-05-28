@@ -1,0 +1,17 @@
+二 在项目中加载文件，识别手势
+            a.把手势库文件gestures文件拷贝到项目的res/raw目录下。然后在布局文件中添加用于手势绘制的View：
+ 
+Xml代码  
+<android.gesture.GestureOverlayView  
+    xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/gestures"  
+    android:layout_width="fill_parent" android:layout_height="fill_parent"  
+    android:gestureStrokeType="multiple" android:eventsInterceptionEnabled="false"  
+    android:orientation="vertical"/>  
+ 
+             b.得到手势库：
+                mLibrary = GestureLibraries.fromRawResource(this, R.raw.gestures);
+              c. 加载手势库：
+                   mLibrary.load();
+                    List<Prediction> predictions = mLibrary.recognize(gesture);//从手势库中查询匹配的内容，匹配 的结果可能包括多个相似的内容，匹配度高的结果放在最前面.prediction.score 是相似度,是一个大于0、小于10的双精度数值，1就是10%相似，3就是30%相似度
+             大多数情况下，手势都是通过一笔完成。然而有一些特别的需求就需要通过多个笔画来实现，这时可以使用
+gestureStrokeType属性进行设置：android:gestureStrokeType=”multiple”

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Sample_9_3!</string>
+    <string name="app_name">Sample_9_3</string>
+    <string name="myTextView1">宁静的夏天</string>
+    <string name="myTextView2">梁静茹</string>
+</resources>

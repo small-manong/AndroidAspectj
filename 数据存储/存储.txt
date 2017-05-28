@@ -1,0 +1,37 @@
+SharedPreferences存储。
+1 采用key-value方式保存数据。
+2 需要在Activity中获得SharedPreferences对象。
+3 最后使用commit方法提交保存数据。
+
+
+推荐使用sqlite数据库存储；
+当点击未工作时置灰单位性质
+SharedPrefered存储时会覆盖修改成添加,用activity方式不好用。
+文件IO存储。
+临时的文件一般都用上面两种方式
+SQLite数据库：关系型数据库。
+两种方式：一种命令行的方式和java语句的方式，。
+1.sqlite3进入
+命令：.help	.quit	.tables  都是以点号开始
+执行SQL语句：.tables。
+sq.script脚本方式的文件里面包含sql语句。
+create table t1( id integer primary key ~~~);
+然后执行这个脚本文件：sqlite3 zhang.db<sq.script 创建库和执行建表
+进入的时候需要进入库然后发现表：sqlite3 zhang.db
+在执行sql语句：insesrt into t1 values(1,43,'js');
+select * from t1;
+
+
+类似jdbc的类：MyDb需要继承 SQLiteOpenHelper
+主类：继承 Listactivity (卡片和列表activity)
+adb shell
+作业：1.进入 底层命令 操作 文件
+sqlite 遵循的那个标准。
+
+查询的语句放到listview 或者spinner里面。
+
+作业：2.dialog方式登录注册 查询数据库 跳到另一个面板。
+
+ContentProvider共享数据:需要有数据源，
+电话本数据的，需要放置权限。
+

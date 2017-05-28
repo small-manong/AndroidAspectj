@@ -1,0 +1,48 @@
+Activity生命周期
+
+开始Activity 会分别执行onCreate onStart onResume
+Activity失去焦点，会执行onPause和onStop
+Activity获得焦点时候，onRestart,onStart,onResume
+关闭Activity时调用，onPause,onStop,onDestory
+
+Service
+两种方式：bindService和Service
+
+
+使用bindService 必须绑定Activity,而且必须用Connectin连接
+
+
+调试调用内核的Service
+
+查看官方apiDemo 例子 学习视图组件的使用
+例如 ：下拉列表
+
+常用视图组件的常用属性的使用
+
+1.TextView  text:="13864194383|http://www.baidu.com"  autoLink="email|phone|web|" 与什么功能配对；
+2.EditText selectAllFocus默认选中、phoneNumber:只要求写电话号码、
+digits="abc":限定输入内容digits
+3.Button 
+4.ImageButton 调用两种图片 ：链接列表文件<selector><item/></selector>（里面图片）
+5.ToggleButton状态开关 
+6.CheckBox 与RadioGroup 
+7.ImageView 	setAlpha设置透明度
+8.AnalogClock模拟时钟  取系统时间它是动不了的。
+   DigitalClock数字时钟
+9.DatePicker&TimePicker   练习：怎么改变系统时间
+了解内容： 10. 帧动画 AnimationDrawable对象。res下有个文件夹 anim
+frame_ani.xml的配置文件
+11.Animation补间动画 可以设置的属性较多：  比帧动画幅度大一些。
+
+作业：
+1.activity生命周期的实现；
+2.Service的实例:用线程实现
+3.Intent实例
+4.通讯录：姓名： 电话： 个人博客：
+当点击电话和个人博客的时候进入相应的activity，
+5.按钮背景的循环切换
+6.图片按钮链接列表文件
+7.状态开关打开灯
+8.实现小孩头与四个按钮的控制     练习：1.图片的大小、旋转:两组按钮实现
+
+

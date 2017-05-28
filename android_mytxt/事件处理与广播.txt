@@ -1,0 +1,24 @@
+BroadcastReveiver
+
+检测运行中，或者系统中的应用程序。
+例如，系统日期，时间发生改变了。会使用BroadcastReveiver广播对象通知应用程序。
+静态注册静态注册是在AndroidManifest.xml文件中配置的
+动态注册
+     动态注册需要在代码中动态的指定广播地址并注册，通  常我们是在Activity或Service注册一个广播
+有序广播
+    每次只发送到优先级较高的接收者那里，然后由优先级高的接受者再传播到优先级低的接收者那里，优先级高的接收者有能力终止这个广播
+ abortBroadcast();  阻塞后面的广播。
+
+
+常用事件
+
+onClickListener
+OnFocusChangeListener
+onKeyDown 
+OnKeyListener
+OnLongClickListener
+onTouchEvent
+onTouchListener
+
+
+

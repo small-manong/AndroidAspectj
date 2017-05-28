@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<ImageView
+		android:id="@+id/iv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:src="@drawable/p1"
+		/>									<!-- 声明了ImageView控件  -->
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		>									<!-- 声明了一个水平分布的线性布局 -->
+		<Button
+			android:id="@+id/previous"
+			android:text="@string/previous"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			/>									<!-- 声明了一个Button控件 -->
+		<Button
+			android:id="@+id/alpha_plus"
+			android:text="@string/alpha_plus"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			/>									<!-- 声明了一个Button控件 -->
+		<Button
+			android:id="@+id/alpha_minus"
+			android:text="@string/alpha_minus"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			/> 									<!-- 声明了一个Button控件 -->
+		<Button
+			android:id="@+id/next"
+			android:text="@string/next"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			/>									<!-- 声明了一个Button控件 -->
+	</LinearLayout>
+	 
+</LinearLayout>

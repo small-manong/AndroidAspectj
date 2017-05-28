@@ -1,0 +1,23 @@
+别的视图组件也需要看一下！
+视图尽可能的用一下！遇到视图的时候别发懵
+
+AutoCompleteTextView :智能提示文本，输入检索提示功能。
+创建数据源，创建适配器添加数据源，适当的泛型。然后装配适配器，定义输入时的属性。
+
+Spinner 下拉列表 
+建立一个BaseAdapter 适配器，列表加载适配器，加上监听事件
+
+TabHost选项卡：注意继承TabActivity 重要的组件
+	需要TabHost 
+
+滚动视图 ScroolBar
+
+Gallery 画廊 
+
+ListView 
+RatingBar 星形滑块 numStars  ,stepSize max, rating 默认值
+ProgressBar
+Notification 消息的发送 与传递
+单选按钮列表对话框 ，多选按钮列表对话框  很有用的组件
+
+对话框的东西稍微再看看

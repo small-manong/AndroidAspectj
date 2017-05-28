@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="btn">#ff0000</color>		<!-- 声明一个名为btn的颜色资源  -->
+</resources>

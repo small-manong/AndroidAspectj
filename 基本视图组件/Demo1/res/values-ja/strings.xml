@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Main!</string>
+    <string name="app_name">d1</string>
+    <string name="bstart">マにつな</string>
+      <string name="babout">の道は</string>
+        <string name="bhelp">ながる</string>
+          <string name="bexit">れませ</string>
+          
+            <string name="aboutcontent">すべての道はローマにつながる</string>
+              <string name="breturn">は力です</string>
+    
+    
+</resources>

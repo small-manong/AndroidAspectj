@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World</string>
+    <string name="app_name">abc</string>
+      <string name="on">开灯</string>				<!-- 声明名为on的字符串资源 -->
+    <string name="off">关灯</string>				<!-- 声明名为off的字符串资源 -->
+</resources>

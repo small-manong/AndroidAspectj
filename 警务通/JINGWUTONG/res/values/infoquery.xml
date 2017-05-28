@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="infoquery">
+    <item >在逃人员查询</item>
+    <item >被盗车辆查询</item>
+    <item >人口信息查询</item>
+    <item >社区信息查询</item>
+    <item >出入境资料查询</item>
+    <item >公交查询</item>
+</string-array>
+</resources>

@@ -1,0 +1,10 @@
+create table t1(
+   id integer primary key,
+   age int default 20,
+   name text
+);
+create table t2(
+    id integer primary key,
+    type_id integer,
+    name text default 'name1'
+);

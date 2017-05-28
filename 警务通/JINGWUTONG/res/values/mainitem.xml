@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mainlist">
+        <item >信息查询</item>
+        <item >信息采集</item>
+        <item >文件上传</item>
+        <item >GPS定位功能</item>
+    </string-array>
+</resources>

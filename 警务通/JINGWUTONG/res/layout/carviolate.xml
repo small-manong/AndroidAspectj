@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80px"
+            android:layout_height="50px"
+            android:text="姓名:" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="50px" />
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80px"
+            android:layout_height="50px"
+            android:text="身份证号:" />
+
+        <EditText
+            android:id="@+id/idno"
+            android:layout_width="match_parent"
+            android:layout_height="50px" />
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80px"
+            android:layout_height="50px"
+            android:text="驾驶证号:" />
+
+        <EditText
+            android:id="@+id/license"
+            android:layout_width="match_parent"
+            android:layout_height="50px" />
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80px"
+            android:layout_height="50px"
+            android:text="违章类型:" />
+
+        <Spinner
+            android:id="@+id/faultRecord"
+            android:layout_width="match_parent"
+            android:layout_height="50px"
+            android:entries="@array/faulttype" />
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80px"
+            android:layout_height="50px"
+            android:text="罚金:" />
+
+        <EditText
+            android:id="@+id/penally"
+            android:layout_width="match_parent"
+            android:layout_height="50px" />
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="80px"
+            android:layout_height="50px"
+            android:text="取消" />
+
+        <Button
+            android:id="@+id/OK"
+            android:layout_width="match_parent"
+            android:layout_height="50px"
+            android:text="提交" />
+    </LinearLayout>
+
+
+</LinearLayout>

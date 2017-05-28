@@ -1,0 +1,9 @@
+* 关闭应用的方法有三种:
+     * 1.获取其进程ID来杀死该进程:推介使用:android.process.killProcess(android.os.Process myPid());
+     * 2.终止正在运行的JAVA虚拟机,从而导致程序终止:System.exist(0);
+     * 3.强制关闭与该报有关的一切执行:AcitvityManager manager = (ActivityManager)getSystemService(Context.ACTIVITY_SERVICE);manager.restartPackage(getPackageName());<uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+     */
+    private void onDstroy() {
+  // TODO Auto-generated method stu
+     android.os.Process.killProcess(android.os.Process.myPid());//当ACTIVITY被摧毁的时候我们就把应用给杀死
+     

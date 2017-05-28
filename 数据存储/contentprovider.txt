@@ -1,0 +1,30 @@
+ Content Provider 属于Android应用程序的组件之一，作为应用程序之间唯一的共享数据的途径，Content Provider 主要的功能就是存储并检索数据以及向其他应用程序提供访问数据的借口。 
+
+    Android 系统为一些常见的数据类型(如音乐、视频、图像、手机通信录联系人信息等)内置了一系列的 Content Provider, 这些都位于android.provider包下。持有特定的许可，可以在自己开发的应用程序中访问这些Content Provider。 
+
+   让自己的数据和其他应用程序共享有两种方式：创建自己的Content Provier(即继承自ContentProvider的子类)  或者是将自己的数据添加到已有的Content Provider中去，后者需要保证现有的Content Provider和自己的数据类型相同且具有该 Content Provider的写入权限。对于Content Provider，最重要的就是数据模型(data model) 和 URI。 
+1.数据模型 
+    Content Provider 将其存储的数据以数据表的形式提供给访问者，在数据表中每一行为一条记录，每一列为具有特定类型和意义的数据。每一条数据记录都包括一个 "_ID" 数值字段，改字段唯一标识一条数据。 
+
+   2.URI 
+    URI，每一个Content Provider 都对外提供一个能够唯一标识自己数据集(data set)的公开URI, 如果一个Content Provider管理多个数据集，其将会为每个数据集分配一个独立的URI。所有的Content Provider 的URI 都以"content://" 开头，其中"content:"是用来标识数据是由Content Provider管理的 schema。 
+
+      在几乎所有的Content Provider 的操作中都会用到URI，因此一般来讲，如果是自己开发的Content Provider，最好将URI定义为常量，这样在简化开发的同时也提高了代码的可维护性。 
+
+      首先来介绍如何访问Content Provider中的数据，访问 Content Provider中的数据主要通过ContentResolver对象，ContentResolver类提供了成员方法可以用来对Content Provider 中的数据进行查询、插入、修改和删除等操作。 以查询为例，查询一个 Content Provider 需要掌握如下的信息。 
+
+      唯一标识Content Provider 的URI 
+      需要访问的数据字段名称。 
+      该数据字段的数据类型 
+ 提示： 如果需要访问特定的某条数据记录，只需该记录的ID 即可。 
+
+    查询Content Provider的方法有两个：ContentResolver的query() 和 Activity 对象的 managedQuery(),二者接收的参数均相同，返回的都是Cursor 对象，唯一不同的是 使用managedQuery 方法可以让Activity 来管理 Cursor 的生命周期。 
+
+    被管理的Cursor 会在 Activity进入暂停状态的时候调用自己的 deactivate 方法自行卸载，而在Activity回到运行状态时会调用自己的requery 方法重新查询生成的Cursor对象。如果一个未被管理的Cursor对象想被Activity管理，可以调用Activity的 startManagingCursor方法来实现。
+ 
+Android应用程序可以使用文件或SqlLite数据库来存储数据。Content Provider提供了一种多应用间数据共享的方式，比如：联系人信息可以被多个应用程序访问。Content Provider是个实现了一组用于提供其他应用程序存取数据的标准方法的类。
+应用程序可以在Content Provider中执行如下操作:
+查询数据
+修改数据
+添加数据
+删除数据

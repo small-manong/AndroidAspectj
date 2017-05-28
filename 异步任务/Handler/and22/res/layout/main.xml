@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:shrinkColumns="0,2">											<!-- 声明一个TableLayout -->
+	<TextView android:id="@+id/tvCount" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:textSize="20dp" />
+	<Button android:id="@+id/btnStart" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="开始计数" />
+	<Button android:id="@+id/btnStop" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="停止计数" />
+	<Button android:id="@+id/btnShowToast" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="3秒后显示Toast信息框" />
+
+</TableLayout>

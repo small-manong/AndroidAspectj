@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="back">#000000</color>		<!-- 声明名为back的颜色资源 -->
+</resources>

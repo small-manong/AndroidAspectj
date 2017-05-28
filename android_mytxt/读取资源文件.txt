@@ -1,0 +1,25 @@
+安卓应用的架构：
+assets里面的文件初始化的io文件；
+InputStream is= this.getResources().getAssets().open("pxr.txt");
+实现这个流操作的实现。
+java基础：io，多线程（手动处理），sql语句，Socket，HTTP协议。
+
+查 application 里面的android:lablel="abc" 与activity label="abc123"
+
+两种方式读取资源文件：配置文件的方式和java对象的方式
+图片资源的读取
+1.<ImageView src="@"/>
+
+2.ImageView i=new ImageView(this);
+i.setImageBitmap(BitmapFactory);
+setContentView(i);怎么样放置多张图片？
+
+声音资源的读取
+创建在res里面raw文件夹放置声音文件。
+MediaPlay mp3=MediaPlayer.create(this,R.raw.sound);
+mp3.start();
+练习：通过IO流技术读取assets文件夹下的文本。
+
+应用程序的权限：短信、打电话、广播、蓝牙、地图、等等
+
+预习android的东西。
